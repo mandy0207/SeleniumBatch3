@@ -22,9 +22,13 @@ public class BasicCommands {
 		driver.navigate().back();
 		Thread.sleep(2000);
 		driver.navigate().forward();
-	
+		
+		Thread.sleep(4000);
+		//close kills current window only
+		//driver.close();
+		
 		//This command is used to kill the driver and browser
-		driver.quit();
+	    driver.quit();
 		
 		
 		
