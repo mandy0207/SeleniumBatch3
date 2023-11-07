@@ -1,5 +1,6 @@
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class GeneralMethods {
@@ -11,10 +12,22 @@ public class GeneralMethods {
 		driver.get("https://www.yatra.com/");
 		
 		//Grab text present inside any element
-		String heading =driver.findElement(By.className("main-heading")).getText();
+		WebElement heading = driver.findElement(By.className("main-heading"));
+		String headingText = heading.getText();
+		System.out.println(headingText);
 		
-		System.out.println(heading);
+		//Grab any attribute value
+		String attributeValue = driver.findElement(By.id("booking_engine_hotels")).getAttribute("title");
+		System.out.println("Attribute value== "+attributeValue);
 		
+		//Tool tip is nothing but title attribute value
+		String toolTip = driver.findElement(By.id("booking_engine_holidays")).getAttribute("title");
+		System.out.println("ToolTip = "+toolTip);
 		
+		//grab any CSS value associated to WebElement
+		String cssValue = heading.getCssValue("font-weight");
+		System.out.println(cssValue);
+		
+		driver.quit();
 	}
 }
