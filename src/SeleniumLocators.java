@@ -10,9 +10,15 @@ public class SeleniumLocators {
 		driver.manage().window().maximize();
 		
 		driver.get("https://www.saucedemo.com/");
-		
+		//using ID locator here
 		driver.findElement(By.id("user-name")).sendKeys("standard_user");
-		driver.findElement(By.id("password")).sendKeys("secret_sauce");
+		//using name locator
+		driver.findElement(By.name("password")).sendKeys("secret_sauce");
+		//using class locator
+		driver.findElement(By.className("submit-button")).click();
+		
+		driver.findElement(By.id("react-burger-menu-btn")).click();
+		
 
 	}
 
