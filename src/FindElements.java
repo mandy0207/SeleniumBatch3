@@ -24,6 +24,7 @@ public class FindElements {
 			Thread.sleep(1000);
 		}
 		
+		
 		/**
 		 * MoDERN WAY OF handling forloop in list
 		 */
