@@ -14,7 +14,8 @@ public class StaticDropdown {
 		driver.get("https://selenium.obsqurazone.com/select-input.php");
 
 		/**
-		 * 1) Grab the webelement of static dropdown 2) Make an object of select class
+		 * 1) Grab the webelement of static dropdown 
+		 * 2) Make an object of select class
 		 * 3) we can select element by uisng any of three methods selectByValue,
 		 *    selectByVisibileText, selectByIndex
 		 */
