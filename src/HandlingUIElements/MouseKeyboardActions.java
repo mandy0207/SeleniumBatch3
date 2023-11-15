@@ -22,6 +22,9 @@ public class MouseKeyboardActions {
 
 		Actions act = new Actions(driver);
 		WebElement others = driver.findElement(By.id("others"));
+		/**
+		 * moveToElement hovers over an element
+		 */
 		act.moveToElement(others).build().perform();
 		
 		WebElement inputBox = driver.findElement(By.xpath("//*[@id='single-input-field']"));
