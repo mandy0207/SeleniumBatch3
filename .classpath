@@ -66,5 +66,6 @@
 	<classpathentry kind="lib" path="C:/Users/msingh/Desktop/My Projects/Obsqura/Jars/selenium-java-4.14.1/lib/opentelemetry-sdk-metrics-1.28.0.jar"/>
 	<classpathentry kind="lib" path="C:/Users/msingh/Desktop/My Projects/Obsqura/Jars/selenium-java-4.14.1/lib/opentelemetry-sdk-trace-1.28.0.jar"/>
 	<classpathentry kind="lib" path="C:/Users/msingh/Desktop/My Projects/Obsqura/Jars/selenium-java-4.14.1/lib/opentelemetry-semconv-1.28.0-alpha.jar"/>
+	<classpathentry kind="lib" path="C:/Users/msingh/Desktop/My Projects/Obsqura/Jars/selenium-java-4.12.1/commons-io-2.15.0.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
