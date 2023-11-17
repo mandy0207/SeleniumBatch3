@@ -12,11 +12,11 @@ public class Scrolling {
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("https://www.obsqurazone.com/");
-		
+			
 		JavascriptExecutor js = (JavascriptExecutor)driver;
 		Thread.sleep(2000);
 		/**
-		 * First way pf scrolling by passing some value
+		 * First way of scrolling by passing some value
 		 */
 		js.executeScript("window.scrollBy(0,2000);");
 		
