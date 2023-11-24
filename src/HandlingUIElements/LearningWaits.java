@@ -4,7 +4,10 @@ import java.time.Duration;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class LearningWaits {
 
@@ -21,10 +24,23 @@ public class LearningWaits {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(4)); 
 		driver.get("https://selenium.obsqurazone.com/dynamic-load.php");
 		
-		driver.findElement(By.cssSelector("[id='save']")).click();
+		driver.findElement(By.cssSelector("[id='save']")).click(); 
 		String name=driver.findElement(By.cssSelector(".card-title")).getText();
-		
 		System.out.println(name);
+		driver.findElement(By.xpath("//a[@id='progress-bars']")).click();
+		driver.findElement(By.xpath("//button[@id='downloadButton']")).click();
+		
+		
+		
+		/**
+		 * Explicit wait
+		 */
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		WebElement progressBar = driver.findElement(By.xpath("//*[@class='progress-label']"));
+		System.out.println(progressBar.getText());
+		wait.until(ExpectedConditions.textToBePresentInElement(progressBar, "Complete!"));
+		System.out.println(progressBar.getText());
+		driver.findElement(By.cssSelector(".ui-dialog-buttonset button")).click();
 		
 
 	}
