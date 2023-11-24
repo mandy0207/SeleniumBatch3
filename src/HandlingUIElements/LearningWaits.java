@@ -35,7 +35,7 @@ public class LearningWaits {
 		/**
 		 * Explicit wait
 		 */
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(12));
 		WebElement progressBar = driver.findElement(By.xpath("//*[@class='progress-label']"));
 		System.out.println(progressBar.getText());
 		wait.until(ExpectedConditions.textToBePresentInElement(progressBar, "Complete!"));
